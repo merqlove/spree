@@ -7,6 +7,8 @@ module Spree
     class MailInterceptor
 
       def self.delivering_email(message)
+        return unless MailSettings.override?
+
         return unless mail_method = Spree::MailMethod.current
         message.from ||= mail_method.preferred_mails_from
 

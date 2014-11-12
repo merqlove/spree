@@ -12,10 +12,12 @@
       <td><%= link_to t(:general_settings), admin_general_settings_path %></td>
       <td><%= t(:general_settings_description) %></td>
     </tr>
+    <% if Spree::Config[:override_actionmailer_config] %>
     <tr>
       <td><%= link_to t(:mail_methods), admin_mail_methods_path %></td>
       <td><%= t(:email_server_settings_description) %></td>
     </tr>
+    <% end %>
     <tr>
       <td><%= link_to t(:tax_categories), admin_tax_categories_path %></td>
       <td><%= t(:tax_categories_setting_description) %></td>
