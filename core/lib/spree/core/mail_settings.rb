@@ -18,10 +18,10 @@ module Spree
         return unless mail_method = Spree::MailMethod.current
         if mail_method.prefers_enable_mail_delivery?
           mail_server_settings = {
-              :address => mail_method.preferred_mail_host,
-              :domain => mail_method.preferred_mail_domain,
-              :port => mail_method.preferred_mail_port,
-              :authentication => mail_method.preferred_mail_auth_type
+            :address => mail_method.preferred_mail_host,
+            :domain => mail_method.preferred_mail_domain,
+            :port => mail_method.preferred_mail_port,
+            :authentication => mail_method.preferred_mail_auth_type
           }
 
           if mail_method.preferred_mail_auth_type != 'none'
