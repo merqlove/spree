@@ -1,5 +1,6 @@
 require 'spree_core'
 require 'devise'
+require 'devise-encryptable'
 require 'cancan'
 
 require 'spree/token_resource'

@@ -245,6 +245,10 @@ describe Spree::Order do
   end
 
   context "#finalize!" do
+    before do
+      order.email = user.email
+    end
+
     let(:order) { Spree::Order.create }
     it "should set completed_at" do
       order.should_receive :completed_at=

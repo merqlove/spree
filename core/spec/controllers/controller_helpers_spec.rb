@@ -6,6 +6,7 @@ require 'spec_helper'
 describe Spree::ProductsController do
 
   before do
+    I18n.enforce_available_locales = false
     I18n.stub(:available_locales => [:en, :de])
     Spree::Config[:default_locale] = nil
     Rails.application.config.i18n.default_locale = :de
