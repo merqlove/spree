@@ -53,7 +53,7 @@ module Spree::Preferences
       destroy(key)
     end
 
-    def delete_cache(key)
+    def clean_cache(key)
       @cache.delete(key)
     end
 

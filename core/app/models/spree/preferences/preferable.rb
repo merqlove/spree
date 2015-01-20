@@ -92,8 +92,8 @@ module Spree::Preferences::Preferable
     preferences.keys.each {|pref| preference_store.delete preference_cache_key(pref)}
   end
 
-  def clear_cache
-    preferences.keys.each {|pref| preference_store.delete_cache preference_cache_key(pref)}
+  def clean_cache
+    preferences.keys.each {|pref| preference_store.clean_cache preference_cache_key(pref)}
   end
 
   private
