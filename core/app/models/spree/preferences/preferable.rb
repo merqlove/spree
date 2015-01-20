@@ -92,6 +92,10 @@ module Spree::Preferences::Preferable
     preferences.keys.each {|pref| preference_store.delete preference_cache_key(pref)}
   end
 
+  def clear_cache
+    preferences.keys.each {|pref| preference_store.delete_cache preference_cache_key(pref)}
+  end
+
   private
 
   def add_pending_preference(name, value)

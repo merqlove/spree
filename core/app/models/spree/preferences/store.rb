@@ -49,8 +49,12 @@ module Spree::Preferences
     end
 
     def delete(key)
-      @cache.delete(key)
+      delete_cache key
       destroy(key)
+    end
+
+    def delete_cache(key)
+      @cache.delete(key)
     end
 
     private
