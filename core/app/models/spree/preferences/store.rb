@@ -49,7 +49,7 @@ module Spree::Preferences
     end
 
     def delete(key)
-      delete_cache key
+      clean_cache key
       destroy(key)
     end
 
