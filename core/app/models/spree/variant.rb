@@ -102,7 +102,7 @@ module Spree
       def check_price
         if self.price.nil?
           raise 'Must supply price for variant or master.price for product.' if self == product.master
-          self.price = product.master.price
+          self.price = product.master.price if product.master
         end
       end
 
